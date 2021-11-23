@@ -1,14 +1,14 @@
 const title = document.querySelector('title');
-let observer = new MutationObserver(function(mutations) {
+let observer = new MutationObserver(function (mutations) {
     changeTitle();
 });
 const config = { subtree: true, characterData: true, childList: true };
 
 observer.observe(title, config);
-window.addEventListener ("load", changeTitle, false);
+window.addEventListener("load", changeTitle, false);
 
 function changeTitle() {
-    var args = window.location.search.replace("?","").split("&");
+    var args = window.location.search.replace("?", "").split("&");
     var ticket, ticket_vorhanden = false, section, sub, leistung, leistung_vorhanden;
     args.forEach(element => {
         var arg = element.split("=");

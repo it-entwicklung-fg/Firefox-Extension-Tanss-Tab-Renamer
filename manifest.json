@@ -1,25 +1,23 @@
 {
-
   "manifest_version": 2,
   "name": "Tanss Title changer",
   "version": "1.0",
-
   "icons": {
     "48": "icons/icon.png"
   },
-
   "description": "Fügt die Ticket-ID in den Tab-Titel ein.",
-
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["rename.js"],
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "rename.js"
+      ],
       "run_at": "document_end"
     }
   ],
-
   "permissions": [
-     "tabs"
+    "tabs"
   ]
-
 }
